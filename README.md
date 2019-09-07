@@ -51,18 +51,18 @@ npm run build:ssr && npm run serve:ssr
 
 ### [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
-![Desktop](screenshoots/pagespeeddesktop.PNG)
-![Mobile](screenshoots/pagespeedmobil.PNG)
+![Desktop](screenshoots/pagespeeddesktop.PNG 'Desktop')
+![Mobile](screenshoots/pagespeedmobil.PNG 'Mobile')
 
 ### Lighthouse - No Throttling
 
-![Desktop](screenshoots/noThrottlingDesktop.PNG)
-![Mobile](screenshoots/noThrottlingMobile.PNG)
+![Desktop](screenshoots/noThrottlingDesktop.PNG 'Desktop')
+![Mobile](screenshoots/noThrottlingMobile.PNG 'Mobile')
 
 ### Lighthouse - Simulated Slow 4G, 4x CPU Slowdown
 
-![Desktop](screenshoots/lighthousedesktop.PNG)
-![Mobile](screenshoots/lighthousemobile.PNG)
+![Desktop](screenshoots/lighthousedesktop.PNG 'Desktop')
+![Mobile](screenshoots/lighthousemobile.PNG 'Mobile')
 
 ## Credits
 
