@@ -1,0 +1,22 @@
+@import './styles-app-loading.scss';
+@import './styles/bootstrap';
+@import './styles/angularmaterial';
+@import './styles/colors';
+@import './styles/border';
+@import './styles/global';
+@import './styles/homepage';
+@import './styles/authpage';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap');
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: $bg-color;
+}

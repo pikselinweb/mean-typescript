@@ -1,0 +1,71 @@
+<nav class="container-fluid p-0">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+
+      <img src="assets/icons/icon-48x48.png" alt="mean-logo" width="40px" class="mr-2 cursor-pointer"
+        (click)="navigate()">
+      <span class="cursor-pointer" (click)="navigate()">MEAN</span>
+
+      <span class="spacer"></span>
+      <span>
+        <a id="view_on_github" href="https://github.com/pikselinweb/mean-typescript" target="_blank" rel="noopener"
+          mat-button>{{'BUTTONS.view_on_github'|translate}}</a>
+        <button id="navigationMenu" aria-label="navigationMenu" mat-icon-button [matMenuTriggerFor]="navMenu">
+          <mat-icon>
+            <fa-icon [icon]="faIcons.menu" size="lg" class="accent-c"></fa-icon>
+          </mat-icon>
+        </button>
+      </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-menu #navMenu="matMenu">
+    <div *ngIf="authService.$user|async;else loginMenu">
+      <button mat-menu-item (click)="navigate('/profile')">
+        <mat-icon>
+          <fa-icon [icon]="faIcons.profile" class="fa-lg"></fa-icon>
+        </mat-icon>
+        <span class="paragraph-color">{{'LABELS.profile'|translate}}</span>
+      </button>
+      <button mat-menu-item [matMenuTriggerFor]="langMenu">
+        <mat-icon>
+          <fa-icon [icon]="faIcons.language" class="fa-lg"></fa-icon>
+        </mat-icon>
+        <span class="paragraph-color">{{'LABELS.language'|translate}}</span>
+      </button>
+      <button mat-menu-item (click)="logOut()">
+        <mat-icon color="warn">
+          <fa-icon [icon]="faIcons.logOut" class="fa-lg"></fa-icon>
+        </mat-icon>
+        <span class="paragraph-color">{{'BUTTONS.logout'|translate}}</span>
+      </button>
+    </div>
+    <ng-template #loginMenu>
+      <button mat-menu-item [matMenuTriggerFor]="langMenu">
+        <mat-icon>
+          <fa-icon [icon]="faIcons.language" class="fa-lg"></fa-icon>
+        </mat-icon>
+        <span class="paragraph-color">{{'LABELS.language'|translate}}</span>
+      </button>
+      <button mat-menu-item (click)="navigate('/auth/login')">
+        <mat-icon>
+          <fa-icon [icon]="faIcons.login" class="fa-lg"></fa-icon>
+        </mat-icon>
+        <span class="paragraph-color">{{'BUTTONS.login'|translate}}</span>
+      </button>
+      <button mat-menu-item (click)="navigate('/auth/register')">
+        <mat-icon>
+          <fa-icon [icon]="faIcons.register" class="fa-lg"></fa-icon>
+        </mat-icon>
+        <span class="paragraph-color">{{'BUTTONS.register'|translate}}</span>
+      </button>
+    </ng-template>
+  </mat-menu>
+  <mat-menu #langMenu="matMenu">
+    <button *ngFor="let lang of availableLanguages" mat-menu-item (click)="changeLanguage(lang)">
+      <mat-icon>
+        <fa-icon [icon]="faIcons.globe" class="fa-lg"></fa-icon>
+      </mat-icon>
+      <span class="paragraph-color">{{'LABELS.' + lang |translate}}</span>
+    </button>
+  </mat-menu>
+</nav>

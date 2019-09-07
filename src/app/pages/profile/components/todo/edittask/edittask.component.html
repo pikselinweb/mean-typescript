@@ -1,0 +1,26 @@
+<div mat-dialog-content>
+  <!-- <div class="p-3 text-center primary-bg mb-5">
+    <span class=" text-uppercase font-weight-normal white0-c">
+      {{'BUTTONS.update_profile' | translate}}
+    </span>
+  </div> -->
+  <form [formGroup]="todoForm" (ngSubmit)="submitToDoForm(todoForm.value, todoForm.valid)">
+    <mat-form-field class="d-block py-2">
+      <mat-label>{{'PLACEHOLDERS.edit_task'|translate}}</mat-label>
+      <textarea matInput rows="1" formControlName="task" required id="task"
+        [placeholder]="'PLACEHOLDERS.edit_task' | translate"></textarea>
+      <mat-error class="font-weight-light" *ngIf="todoForm.controls.task.invalid">
+        {{getErrorMessage(todoForm,'task')|translate}}</mat-error>
+    </mat-form-field>
+    <div class="text-right py-3">
+      <button class="mr-2 text-uppercase" mat-raised-button color="warn" type="button" (click)="dialogRef.close()">
+        <small>{{'BUTTONS.cancel' | translate}}</small>
+      </button>
+      <button type="submit" class="text-uppercase" [disabled]="todoForm.invalid || todoForm.pristine" mat-raised-button
+        color="primary">
+        <small>{{'BUTTONS.update' | translate}}</small>
+      </button>
+
+    </div>
+  </form>
+</div>

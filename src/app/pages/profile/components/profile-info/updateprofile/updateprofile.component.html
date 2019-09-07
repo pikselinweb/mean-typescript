@@ -1,0 +1,65 @@
+<div mat-dialog-content>
+  <div>
+    <div class="p-3 text-center primary-bg mb-5">
+      <span class=" text-uppercase font-weight-normal white0-c">
+        {{'BUTTONS.update_profile' | translate}}
+      </span>
+    </div>
+    <form [formGroup]="profileForm" (ngSubmit)="submitprofileForm(profileForm.value, profileForm.valid)">
+      <mat-form-field class="col-md-6 col-sm-12 py-2">
+        <mat-label>{{'PLACEHOLDERS.enter_name'|translate}}</mat-label>
+        <input matInput formControlName="name" required id="name" [placeholder]="'PLACEHOLDERS.enter_name' | translate">
+        <mat-error class="font-weight-light" *ngIf="profileForm.controls.name.invalid">
+          {{getErrorMessage(profileForm,'name')|translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-md-6 col-sm-12 py-2">
+        <mat-label>{{'PLACEHOLDERS.enter_surname'|translate}}</mat-label>
+        <input matInput formControlName="surname" required id="surname"
+          [placeholder]="'PLACEHOLDERS.enter_surname' | translate">
+        <mat-error class="font-weight-light" *ngIf="profileForm.controls.surname.invalid">
+          {{getErrorMessage(profileForm,'surname')|translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-12 py-2">
+        <mat-label>{{'PLACEHOLDERS.enter_email'|translate}}</mat-label>
+        <input matInput formControlName="email" required id="email"
+          [placeholder]="'PLACEHOLDERS.enter_email' | translate">
+        <mat-error class="font-weight-light" *ngIf="profileForm.controls.email.invalid">
+          {{getErrorMessage(profileForm,'email')|translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-12 py-2">
+        <mat-label>{{'PLACEHOLDERS.enter_phone'|translate}}</mat-label>
+        <input matInput formControlName="phoneNumber" required id="phoneNumber"
+          [placeholder]="'PLACEHOLDERS.enter_phone' | translate">
+        <mat-error class="font-weight-light" *ngIf="profileForm.controls.phoneNumber.invalid">
+          {{getErrorMessage(profileForm,'phoneNumber')|translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-12 py-2">
+        <mat-label>{{'PLACEHOLDERS.enter_job'|translate}}</mat-label>
+        <input matInput formControlName="profession" required id="profession"
+          [placeholder]="'PLACEHOLDERS.enter_job' | translate">
+        <mat-error class="font-weight-light" *ngIf="profileForm.controls.profession.invalid">
+          {{getErrorMessage(profileForm,'profession')|translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-12 py-2">
+        <mat-label>{{'PLACEHOLDERS.enter_web'|translate}}</mat-label>
+        <input matInput formControlName="web" required id="web" [placeholder]="'PLACEHOLDERS.enter_web' | translate">
+        <mat-error class="font-weight-light" *ngIf="profileForm.controls.web.invalid">
+          {{getErrorMessage(profileForm,'web')|translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="col-12 py-2">
+        <mat-label>{{'PLACEHOLDERS.enter_address'|translate}}</mat-label>
+        <textarea matInput rows="3" formControlName="address" required id="address"
+          [placeholder]="'PLACEHOLDERS.enter_address' | translate"></textarea>
+        <mat-error class="font-weight-light" *ngIf="profileForm.controls.address.invalid">
+          {{getErrorMessage(profileForm,'address')|translate}}</mat-error>
+      </mat-form-field>
+      <p class="text-right px-3 pb-3">
+        <button class="mr-2 text-uppercase" mat-raised-button color="warn" type="button" (click)="dialogRef.close()">
+          <small>{{'BUTTONS.cancel' | translate}}</small>
+        </button>
+        <button type="submit" class="text-uppercase" [disabled]="profileForm.invalid || profileForm.pristine"
+          mat-raised-button color="primary">
+          <small>{{'BUTTONS.update' | translate}}</small>
+        </button>
+      </p>
+    </form>

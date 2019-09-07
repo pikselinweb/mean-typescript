@@ -1,0 +1,42 @@
+$paragraph-color:rgba(0, 0, 0, 0.6);
+$bg-color:#f3f3f3;
+$white0-color:#ffffff;
+$white1-color:#f7f7f7;
+$white2-color:#efefef;
+$white3-color:#ededed;
+
+.paragraph-color {
+  color: $paragraph-color !important;
+}
+
+.site-bg {
+  background-color: $bg-color;
+}
+
+$color-array: $primary-color,
+$accent-color,
+$warn-color,
+$white0-color,
+$white1-color,
+$white2-color,
+$white3-color;
+
+$color-names:primary,
+accent,
+warn,
+white0,
+white1,
+white2,
+white3;
+
+@each $color in $color-array {
+  $i: index($color-array, $color);
+
+  .#{nth($color-names,$i)}-c {
+    color: $color !important;
+  }
+
+  .#{nth($color-names,$i)}-bg {
+    background-color: $color !important;
+  }
+}

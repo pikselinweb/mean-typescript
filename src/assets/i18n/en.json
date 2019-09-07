@@ -1,0 +1,96 @@
+{
+  "BUTTONS": {
+    "cancel": "Cancel",
+    "change_img": "Change Image",
+    "click_here": "click here.",
+    "create": "Create",
+    "live_demo": "Live Demo",
+    "login": "Login",
+    "logout": "Log Out",
+    "menu": "Menu",
+    "register": "Register",
+    "update": "Update",
+    "update_info": "Update Info",
+    "update_profile": "Update Profile Info",
+    "view_on_github": "View on Github"
+
+  },
+  "PLACEHOLDERS": {
+    "edit_task": "Edit task",
+    "email": "Email",
+    "enter_address": "Please enter your address",
+    "enter_email": "Please enter your email",
+    "enter_job": "Please enter your profession",
+    "enter_name": "Please enter your name",
+    "enter_phone": "Please enter your phone number",
+    "enter_surname": "Please enter your surname",
+    "enter_task": "Create new task",
+    "enter_web": "Please enter your website",
+    "password": "Password",
+    "password2": "Re-enter Password"
+  },
+  "LABELS": {
+    "already_have_account": "Already have an account ?",
+    "all_right_reserved": "All right Reversed.",
+    "created_at": "Created",
+    "dont_have_account": "Don't have an account ?",
+    "en": "English",
+    "forgot_password": "Forgot password?",
+    "home_page": "Home Page",
+    "language": "Language",
+    "profile": "Profile",
+    "todolist": "To Do List",
+    "tr": "Turkish",
+    "updated_at": "Updated",
+    "update_profilepicture": "Update Profile Picture",
+    "user_info": "Personal Info"
+  },
+  "NOTIFICATIONS": {
+    "account_created": "Your account has been successfully created",
+    "account_logged_on": "You have successfully logged in",
+    "logout": "You have been successfully logged out.",
+    "profile_updated": "Profile updated successfuly.",
+    "profilepicture_updated": "Profile picture updated successfuly.",
+    "todo": {
+      "create": "Task has been successfully created",
+      "update": "Task has been successfully updated",
+      "delete": "Task has been  deleted"
+    }
+  },
+  "ERRORS": {
+    "account_doesnt_exist": "That account does not exist",
+    "email_already_use": "That email address is already in use",
+    "email_valid": "Please enter valid email address",
+    "field_blank": "Field can not be blank",
+    "imageload_fail": "Image load faied. Please select image type file.",
+    "login_email": "Something wrong with  email login",
+    "maxlength": "The text entered exceeds the maximum length",
+    "minlength": "The text entered under the minimum length",
+    "need_user_login": "Please login",
+    "no_provider": "No provider selected...",
+    "passwordMatch": "Password and confirm password does not match",
+    "select_one": "You must select one",
+    "wrong_credentials": "Login failed wrong user credentials"
+
+  },
+
+  "SEO": {
+    "title": {
+      "home": "Open-Source Full-Stack MEAN TO-DO Application",
+      "auth": "Auth | Login or Register",
+      "profile": "Profile | Edit Your Profile and Add To Do"
+    },
+    "meta": {
+      "description": "Free and Open Source TypeScript Full Stack Mean To Do Starter App"
+    }
+  },
+  "HOME_PAGE": {
+    "angular": "Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations.",
+    "express": "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
+    "main_description": "This TypeScript based M.E.A.N project uses Server Side Rendering (SSR) that allow to load pages faster and make your web application seo-friendly. Passport.js (JWT and Local) is used to manage users. Users can edit their personal infos and set profile image. Clouninary preferred to store images. Also this application inlude simple to do app in profile page.",
+    "main_submain_description": "With this  you can make fast startup on your next Full-Stack M.E.A.N application. For docs and source code",
+    "main_title": "Open-Source Full-Stack MEAN TO-DO Application",
+    "mongodb": "MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.",
+    "node": "Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser."
+  }
+}

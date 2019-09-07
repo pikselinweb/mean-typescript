@@ -1,0 +1,95 @@
+{
+  "BUTTONS": {
+    "cancel": "Vazgeç",
+    "change_img": "Resmi Değiştir",
+    "click_here": "tıklayınız.",
+    "create": "Oluştur",
+    "live_demo": "Hemen Test Et",
+    "login": "Giriş Yap",
+    "logout": "Çıkış Yap",
+    "menu": "Menü",
+    "register": "Kayıt Ol",
+    "update": "Güncelle",
+    "update_info": "Bilgileri Güncelle",
+    "update_profile": "Profil Bilgilerini Güncelle",
+    "view_on_github": "Github'da Görüntüle"
+
+  },
+  "PLACEHOLDERS": {
+    "edit_task": "Görevi düzenle",
+    "email": "Mail adresi",
+    "enter_address": "Adresini giriniz",
+    "enter_email": "Mail adresinizi giriniz",
+    "enter_job": "Mesleğinizi giriniz",
+    "enter_name": "Adınızı giriniz",
+    "enter_phone": "Telefon numaranızı giriniz",
+    "enter_surname": "Soyadınızı giriniz",
+    "enter_task": "Yeni görev oluştur",
+    "enter_web": "İnternet sitenizi giriniz",
+    "password": "Şifre",
+    "password2": "Şifre (Tekrar)"
+  },
+  "LABELS": {
+    "already_have_account": "Hâlihazırda üyeliğiniz mi var ?",
+    "all_right_reserved": "Bütün hakları saklıdır.",
+    "created_at": "Oluşturulma",
+    "en": "İngilizce",
+    "dont_have_account": "Üyeliğiniz mi yok?",
+    "forgot_password": "Şifrenizi mi unuttunuz?",
+    "home_page": "Ana Sayfa",
+    "language": "Lisan",
+    "profile": "Profil",
+    "todolist": "Yapılacaklar Listesi",
+    "tr": "Türkçe",
+    "update_profilepicture": "Profil Resmini Güncelle",
+    "updated_at": "Güncellenme",
+    "user_info": "Kullanıcı Bilgileri"
+  },
+  "NOTIFICATIONS": {
+    "account_created": "Üyeliğiniz başarıyla oluşturulmuştur",
+    "account_logged_on": "Başarıyla giriş yaptınız",
+    "logout": "Başarıyla çıkış yaptınız.",
+    "profile_updated": "Profil bilgileri başarıyla güncellendi.",
+    "profilepicture_updated": "Profil fotoğrafınız başarıyla güncellendi.",
+    "todo": {
+      "create": "Görev yapılacaklar listesine eklendi",
+      "update": "Seçili görev güncellendi",
+      "delete": "Görev yapılacaklar listesinden kaldırıldı"
+    }
+  },
+  "ERRORS": {
+    "account_doesnt_exist": "Bu mail adresi ile ilişkili üyelik bulunmamaktadır",
+    "email_already_use": "Bu mail adresi ile ilişkili bir üyelik bulunmaktadır",
+    "email_valid": "Lütfen geçerli bir mail adresi girin",
+    "field_blank": "Bu alan boş bırakılamaz",
+    "imageload_fail": "Fotoğraf yüklemesi başarısız oldu. Lütfen sadece resim türündeki dosyaları yükleyiniz.",
+    "login_email": "Email ile girişte bir sorun yaşandı",
+    "maxlength": "Karakter sınırını aştınız",
+    "minlength": "Minimum karakter sınırının altındasınız",
+    "need_user_login": "Lütfen giriş yapınız",
+    "no_provider": "Sağlayıcı seçilmedi...",
+    "passwordMatch": "Şifre ve doğrulama şifresi eşleşmemektedir",
+    "select_one": "Birini seçmeniz gerekmektedir",
+    "wrong_credentials": "Bilgilerinizi kontrol edip tekrar deneyiniz"
+  },
+
+  "SEO": {
+    "title": {
+      "home": "Açık Kaynak Kodlu Full-Stack MEAN Yapılacaklar Listesi Uygulaması",
+      "auth": "Giriş Yapın ya da Kayıt Olun",
+      "profile": "Profil | Profil Bilgilerini ya da Yapılacaklar Listesini Düzenleyin"
+    },
+    "meta": {
+      "description": "Ücretsiz ve Açık Kaynak Kodlu TypeScript Full Stack MEAN Yapılacaklar Listesi Başlangıç Uygulaması"
+    }
+  },
+  "HOME_PAGE": {
+    "angular": "Angular Google ve gönüllü kuruluş - bireyler tarafından geliştirilen TypeScript tabanlı açık kaynak kodlu bir web uygulama çatsıdır.",
+    "express": "Express web ve mobil platformları için bir dizi güçlü özellikler barındıran sade ve esnek Node.js tabanlı web uygulama çatısıdır.",
+    "main_description": "TypeScript ile hazırlanan bu proje Sunucu Tabanlı Derleme (SSR) prensibiyle çalışmaktır. Bu sayede içerik sunucuda derlendikten sonra tarayıcıya iletilmektedir. Bu yöntem arama motoru optimizasyonu için yararlıdır. Üyelik sistemi içinse Passport.js (Local ve JSW) kullanılmış olup kullanıcılara bilgilerini güncelleme ve profil resmi ekleme imkanı sunmaktadır. Bahsi geçen özellik için varsayılan olarak Cloudinary hizmeti kullanılmaktadır. Ek olarak C.R.U.D (Oluşturma, Okuma, Güncelleme ve Silme ) işlemleri için profil sayfasında basit bir yapılacaklar listesi tasarlanmıştır.",
+    "main_submain_description": "Bu projeyi kullanarak oluşturmayı düşündüğünüz M.E.A.N Full-Stack projeleriniz için hızlı bir başlangıç yapabilirsiniz. Kaynak kod ve dökümanlar için",
+    "main_title": "Açık Kaynak Kodlu Full-Stack MEAN Yapılacaklar Listesi Uygulaması",
+    "mongodb": "MongoDB modern uygulama geliştiricileri için için oluşturulmuş bulut destekli belge tabanlı(NoSQL-İlişkisel Olmayan) bir veri tabanıdır.",
+    "node": "Node.js açık kaynaklı, sunucu tarafında çalışan ve ağ bağlantılı uygulamalar için geliştirilmiş bir çalıştırma ortamıdır."
+  }
+}

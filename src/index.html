@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Open-Source Full-Stack MEAN TO-DO Application</title>
+  <base href="/">
+  <meta name="description" content="Free and Open Source TypeScript Full Stack Mean To Do Starter App">
+  <meta name="keywords" content="mean, full stack, angular express mongo node">
+  <meta name="robots" content="index,fallow">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta itemprop="name" content="Open-Source Full-Stack MEAN TO-DO Application">
+  <meta itemprop="description" content="Free and Open Source TypeScript Full Stack Mean To Do Starter App">
+
+  <meta itemprop="image" content="assets/logo/meanlogofull.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@pikselinweb">
+  <meta name="twitter:title" content="Open-Source Full-Stack MEAN TO-DO Application">
+  <meta name="twitter:description" content="Free and Open Source TypeScript Full Stack Mean To Do Starter App">
+  <meta name="twitter:creator" content="@pikselinweb">
+  <meta name="twitter:image" content="https://www.mean.com/assets/icons/icon-512x512.png">
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="Open-Source Full-Stack MEAN TO-DO Application" />
+  <meta property="og:type" content="summary" />
+  <meta property="og:url" content="https://www.mean.com/" />
+  <meta property="og:image" content="https://www.mean.com/assets/icons/icon-512x512.png" />
+  <meta property="og:description" content="Free and Open Source TypeScript Full Stack Mean To Do Starter App" />
+  <meta property="og:site_name" content="mean" />
+  <meta name="robots" content="index, follow">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/icon-16x16.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#1976d2">
+
+  <style type="text/css">
+    body,
+    html {
+      height: 100%;
+    }
+
+    .app-loading {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .app-loading .spinner {
+      height: 200px;
+      width: 200px;
+      animation: rotate 2s linear infinite;
+      transform-origin: center center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .app-loading .spinner .path {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+      animation: dash 1.5s ease-in-out infinite;
+      stroke-linecap: round;
+      stroke: #ddd;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+      }
+
+      50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+      }
+
+      100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <app-root>
+    <div class="app-loading">
+      <div class="logo">
+        <svg class="spinner" viewBox="25 25 50 50">
+          <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+      </div>
+    </div>
+  </app-root>
+
+
+  <noscript>Please enable JavaScript to continue using this application.</noscript>
+</body>
+
+</html>

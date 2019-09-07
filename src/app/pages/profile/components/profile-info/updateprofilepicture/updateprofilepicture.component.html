@@ -1,0 +1,24 @@
+<div mat-dialog-content>
+  <div>
+    <div class="p-3 text-center  primary-bg mb-5">
+      <span class="white0-c text-uppercase font-weight-normal">{{'LABELS.update_profilepicture' | translate}}</span>
+    </div>
+    <div class="text-center">
+      <input type="file" accept=".png, .jpg, .jpeg, .gif" (change)="fileChangeEvent($event)" />
+      <image-cropper [imageChangedEvent]="imageChangedEvent" class="mw-100" [maintainAspectRatio]="true"
+        [aspectRatio]="1 / 1" [resizeToWidth]="200" [roundCropper]="false" format="png" outputType="both"
+        (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()" (loadImageFailed)="loadImageFailed()"
+        [style.display]="cropperReady ? null : 'none'"></image-cropper>
+      <p class="text-right px-3">
+        <button mat-raised-button class="mr-1 text-uppercase" color="warn" type="button" (click)="dialogRef.close()">
+          <small> {{'BUTTONS.cancel' | translate}}</small>
+        </button>
+        <button mat-raised-button class="text-uppercase" color="primary" [disabled]="!cropperReady" type="button"
+          (click)="saveImg()">
+          <small>{{'BUTTONS.update' | translate}}</small>
+
+        </button>
+      </p>
+    </div>
+  </div>
+</div>

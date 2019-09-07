@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+<div class="container">
+  <div class="py-4 accordion-container">
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header class="white1-bg">
+        <mat-panel-title>
+          <!-- Kullanıcı Bilgileri -->
+          <div class="d-flex align-items-center paragraph-color">
+            <fa-icon [icon]="faIcons.user" class="fa-lg primary-c fa-iconspance"></fa-icon>
+            <span class=" text-uppercase">
+              {{'LABELS.user_info'|translate}}
+            </span>
+          </div>
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-profile-info></app-profile-info>
+    </mat-expansion-panel>
+  </div>
+  <div class="py-4 accordion-container">
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header class="white1-bg">
+        <mat-panel-title>
+          <!-- Kullanıcı Bilgileri -->
+          <div class="d-flex align-items-center paragraph-color">
+            <fa-icon [icon]="faIcons.todo" class="fa-lg primary-c fa-iconspance"></fa-icon>
+            <span class=" text-uppercase">
+              {{'LABELS.todolist'|translate}}
+            </span>
+          </div>
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <app-todo></app-todo>
+    </mat-expansion-panel>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+<div class="container-fluid">
+  <div class="row align-items-center justify-content-center py-3" *ngIf="currentUser | async as cuser">
+    <div class="col-md-5 py-2 text-center">
+      <span>
+        <img [src]="cuser.profilePicture?cuser.profilePicture.url:defaultImgPath" alt="profile picture"
+          class="border-circle border-4px-white3 mw-100">
+      </span>
+      <div class="py-3">
+
+        <button mat-raised-button color="primary" class="mw-50 text-uppercase" [matMenuTriggerFor]="editprofile">
+          <small>{{'BUTTONS.update_info' | translate}}</small>
+        </button>
+        <mat-menu #editprofile="matMenu">
+          <button mat-menu-item (click)="editPP(cuser)">
+            <mat-icon>
+              <fa-icon [icon]="faIcons.camera" class="fa-lg"></fa-icon>
+            </mat-icon>
+            <span class="paragraph-color">{{'BUTTONS.change_img' | translate}}</span>
+          </button>
+          <button mat-menu-item (click)="editProfile(cuser)">
+            <mat-icon>
+              <fa-icon [icon]="faIcons.userEdit" class="fa-lg"></fa-icon>
+            </mat-icon>
+            <span class="paragraph-color">{{'BUTTONS.update_profile' | translate}}</span>
+          </button>
+        </mat-menu>
+      </div>
+
+    </div>
+    <div class="col-md-7 py-2">
+      <div class="border-2px-white3 border-rounded p-2 mb-2 d-flex">
+        <span class="fa-iconspance">
+          <fa-icon class="fa-lg primary-c" [icon]="faIcons.user"></fa-icon>
+        </span>
+        <span class="paragraph-color">
+          {{cuser.name}} {{cuser.surname}}
+        </span>
+      </div>
+      <div class="border-2px-white3 border-rounded p-2 mb-2 d-flex">
+        <span class="fa-iconspance">
+          <fa-icon class="fa-lg primary-c" [icon]="faIcons.job"></fa-icon>
+        </span>
+        <span class="paragraph-color">
+          {{cuser.profession}}
+        </span>
+      </div>
+      <div class="border-2px-white3 border-rounded p-2 mb-2 d-flex">
+        <span class="fa-iconspance">
+          <fa-icon class="fa-lg primary-c" [icon]="faIcons.email"></fa-icon>
+        </span>
+        <span class="paragraph-color">
+          {{cuser.email}}
+        </span>
+      </div>
+      <div class="border-2px-white3 border-rounded p-2 mb-2 d-flex">
+        <span class="fa-iconspance">
+          <fa-icon class="fa-lg primary-c" [icon]="faIcons.phoneNumber"></fa-icon>
+        </span>
+        <span class="paragraph-color">
+          {{cuser.phoneNumber}}
+        </span>
+      </div>
+      <div class="border-2px-white3 border-rounded p-2 mb-2 d-flex">
+        <span class="fa-iconspance">
+          <fa-icon class="fa-lg primary-c" [icon]="faIcons.web"></fa-icon>
+        </span>
+        <span class="paragraph-color">
+          {{cuser.web}}
+        </span>
+      </div>
+      <div class="border-2px-white3 border-rounded p-2 mb-2 d-flex">
+        <span class="fa-iconspance">
+          <fa-icon class="fa-lg primary-c" [icon]="faIcons.address"></fa-icon>
+        </span>
+        <span class="paragraph-color">
+          {{cuser.address}}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

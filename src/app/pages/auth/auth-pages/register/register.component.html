@@ -1,0 +1,63 @@
+<div class="text-center">
+  <div class="py-1 primary-bg white0-c text-uppercase font-weight-normal">
+    <h4>{{'BUTTONS.register'|translate}}</h4>
+  </div>
+  <div class="pt-3">
+    <form [formGroup]="registerForm" (ngSubmit)="submitregisterForm(registerForm.value, registerForm.valid)"
+      class="py-3 px-4">
+      <mat-form-field class="d-block py-2">
+        <mat-label>{{'PLACEHOLDERS.email'|translate}}</mat-label>
+        <input matInput formControlName="email" required id="email" type="email"
+          [placeholder]="'PLACEHOLDERS.email'|translate">
+        <span matSuffix>
+          <mat-icon>
+            <fa-icon [icon]="faIcons.email" class="paragraph-color"></fa-icon>
+          </mat-icon>
+        </span>
+        <mat-error class="py-1" *ngIf="registerForm.controls.email.invalid">
+          {{getErrorMessage(registerForm,'email') |translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="d-block py-2">
+        <mat-label>{{'PLACEHOLDERS.password'|translate}}</mat-label>
+        <input matInput formControlName="pw1" required id="pw1" [type]="hidePassword ? 'password' : 'text'"
+          [placeholder]="'PLACEHOLDERS.password'|translate">
+        <button mat-icon-button type="button" matSuffix (click)="hidePassword = !hidePassword"
+          [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+          <mat-icon>
+            <fa-icon *ngIf="hidePassword" [icon]="faIcons.visibility_off" class="paragraph-color"></fa-icon>
+            <fa-icon *ngIf="!hidePassword" [icon]="faIcons.visibility" class="paragraph-color"></fa-icon>
+          </mat-icon>
+        </button>
+        <mat-error class="py-1" *ngIf="registerForm.controls.pw1.invalid">
+          {{getErrorMessage(registerForm,'pw1') |translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="d-block py-2">
+        <mat-label>{{'PLACEHOLDERS.password2'|translate}}</mat-label>
+        <input matInput formControlName="pw2" required id="pw2" [type]="hidePassword ? 'password' : 'text'"
+          [placeholder]="'PLACEHOLDERS.password2'|translate">
+        <button mat-icon-button type="button" matSuffix (click)="hidePassword = !hidePassword"
+          [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hidePassword">
+          <mat-icon>
+            <fa-icon *ngIf="hidePassword" [icon]="faIcons.visibility_off" class="paragraph-color"></fa-icon>
+            <fa-icon *ngIf="!hidePassword" [icon]="faIcons.visibility" class="paragraph-color"></fa-icon>
+          </mat-icon>
+        </button>
+        <mat-error class="py-1" *ngIf="registerForm.controls.pw2.invalid">
+          {{getErrorMessage(registerForm,'pw2') |translate}}</mat-error>
+      </mat-form-field>
+
+      <div class="pt-4 pb-3">
+        <button type="submit" mat-raised-button [disabled]="registerForm.invalid" color="primary"
+          class="mw-50 text-uppercase">
+          <span>{{'BUTTONS.register'|translate}}</span>
+        </button></div>
+
+      <div class="py-3">
+        <small>
+          <a [routerLink]="['/auth/login']"
+            class="font-italic none-decoration accent-link">{{'LABELS.already_have_account'|translate}}</a>
+        </small>
+      </div>
+    </form>
+  </div>
+</div>

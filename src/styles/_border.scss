@@ -1,0 +1,57 @@
+$borderradius-array:0px,
+10px,
+50%;
+$borderradius-names:square,
+rounded,
+circle;
+$bordersize-array:1px,
+2px,
+3px,
+4px,
+5px,
+6px,
+7px,
+8px,
+9px,
+10px;
+
+@each $br in $borderradius-array {
+  $i: index($borderradius-array, $br);
+
+  .border-#{nth($borderradius-names,$i)} {
+    border-radius: $br;
+  }
+}
+
+
+@each $color in $color-array {
+  $i: index($color-array, $color);
+
+  @each $bpx in $bordersize-array {
+    .border-#{$bpx}-#{nth($color-names,$i)} {
+      border: $bpx solid $color !important;
+    }
+
+    .border-top-#{$bpx}-#{nth($color-names,$i)} {
+      border-top: $bpx solid $color !important;
+    }
+
+    .border-bottom-#{$bpx}-#{nth($color-names,$i)} {
+      border-bottom: $bpx solid $color !important;
+    }
+
+    .border-left-#{$bpx}-#{nth($color-names,$i)} {
+      border-left: $bpx solid $color !important;
+    }
+
+    .border-right-#{$bpx}-#{nth($color-names,$i)} {
+      border-right: $bpx solid $color !important;
+    }
+
+  }
+
+
+  .border-#{nth($color-names,$i)} {
+    border: 1px solid $color !important;
+  }
+}

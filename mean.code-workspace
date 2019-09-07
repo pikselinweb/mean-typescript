@@ -1,0 +1,21 @@
+{
+  "folders": [{
+    "path": "."
+  }],
+  "settings": {
+    "editor.formatOnSave": true,
+    "[handlebars]": {
+      "editor.formatOnSave": false
+    },
+    "prettier.printWidth": 80,
+    "prettier.singleQuote": true,
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/e2e": true,
+      "**/.editorconfig": true,
+      "**/gitignore.txt": true,
+      "**/.vscode": true
+    },
+    "git.ignoreLimitWarning": true
+  }
+}

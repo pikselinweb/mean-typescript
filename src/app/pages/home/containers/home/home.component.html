@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+<main>
+  <section id="welcome">
+    <div class="header">
+      <div class="header__bg"></div>
+      <div class="px-3 pt-4 text-right">
+        <a mat-raised-button color="primary" [routerLink]="['/profile']">
+          <fa-icon [icon]="faIcons.demo" [fixedWidth]="true" size="lg" [spin]="true" class="accent-c">
+          </fa-icon>
+          <span>&nbsp;{{'BUTTONS.live_demo'|translate}}</span>
+
+        </a>
+      </div>
+    </div>
+  </section>
+  <section id="description">
+    <div class="contanier">
+      <div class="text-center d-flex pt-3 justify-content-center">
+        <span class="col-lg-8 col-md-8 col-sm-12 col-12 primary-c mat-display-2 mb-0">
+          {{'HOME_PAGE.main_title'|translate}}
+        </span>
+      </div>
+    </div>
+    <div class="container text-justify py-3 paragraph-color my-3">
+      <div class="row">
+        <div class="col-12 text-justify paragraph-color">
+          <p class="lead">
+            {{'HOME_PAGE.main_description' | translate}}
+          </p>
+          <p class="lead">
+            {{'HOME_PAGE.main_submain_description' | translate}}
+            <a href="https://github.com/pikselinweb/mean-typescript" target="_blank" rel="noopener"
+              class="lead mat-tab-link">
+              {{'BUTTONS.click_here' | translate}}</a>
+          </p>
+
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12 py-3">
+          <a href="https://www.mongodb.com/" target="_blank" rel="noopener" class="credit-link font-weight-bold">
+            MongoDB
+          </a>
+          <p class="lead">
+            {{'HOME_PAGE.mongodb'|translate}}
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12 py-3">
+          <a href="https://expressjs.com/" target="_blank" rel="noopener" class="credit-link font-weight-bold">
+            Express.js
+          </a>
+          <p class="lead">
+            {{'HOME_PAGE.express'|translate}}
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12 py-3">
+          <a href="https://angular.io/" target="_blank" rel="noopener" class="credit-link font-weight-bold">
+            Angular
+          </a>
+          <p class="lead">
+            {{'HOME_PAGE.angular'|translate}}
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-6 col-12 py-3">
+          <a href="https://nodejs.org" target="_blank" rel="noopener" class="credit-link font-weight-bold">
+            Node.js
+          </a>
+          <p class="lead">
+            {{'HOME_PAGE.node'|translate}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>

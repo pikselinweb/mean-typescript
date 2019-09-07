@@ -1,0 +1,51 @@
+.credit-link {
+  text-decoration: none;
+  color: $primary-color;
+  transition: color 0.5s ease;
+
+  &:hover {
+    color: darken($color: $primary-color, $amount: 8);
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.ended-task {
+  text-decoration: line-through;
+  color: $paragraph-color;
+}
+
+.fa-iconspance::before {
+  content: "";
+  display: block;
+  margin-right: 30px;
+}
+
+.fa-iconspance-small::before {
+  content: "";
+  display: block;
+  margin-right: 20px;
+}
+
+.none-decoration {
+  text-decoration: none !important;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.warn-link {
+  color: lighten($color:$warn-color, $amount: 10);
+  transition: color 0.5s ease;
+
+  &:hover {
+    color: $warn-color;
+  }
+}
+
+.mw-50 {
+  min-width: 50% !important;
+}

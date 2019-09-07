@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <div class="row align-items-center">
+    <div class="col-lg-5 col-md-5 col-sm-12 col-12 py-3">
+      <form [formGroup]="todoForm" (ngSubmit)="submitToDoForm(todoForm.value, todoForm.valid)">
+        <mat-form-field class="d-block py-2">
+          <mat-label>{{'PLACEHOLDERS.enter_task'|translate}}</mat-label>
+          <textarea matInput rows="1" formControlName="task" required id="task"
+            [placeholder]="'PLACEHOLDERS.enter_task' | translate"></textarea>
+          <mat-error class="font-weight-light" *ngIf="todoForm.controls.task.invalid">
+            {{getErrorMessage(todoForm,'task')|translate}}</mat-error>
+        </mat-form-field>
+        <div class="text-center py-3">
+          <button mat-raised-button type="submit" color="primary" class="mw-50" [disabled]="todoForm.invalid">
+            <small class="text-uppercase">{{'BUTTONS.create'|translate}}</small>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-7 col-md-7 col-sm-12 col-12 py-3">
+      <perfect-scrollbar style="max-width: 100%; max-height: 450px;" class="pr-3">
+        <div *ngFor="let todo of todoService.$todoList|async">
+          <div class="border-2px-white3 border-rounded px-3 py-2 mb-2 d-flex align-items-center">
+            <span>
+              <mat-checkbox color="accent" [(ngModel)]="todo.complete" (change)="updateTask(todo)">
+                <span [ngClass]="{'ended-task': todo.complete}">{{todo.task}}</span>
+              </mat-checkbox>
+            </span>
+            <span class="spacer"></span>
+            <span>
+              <button mat-icon-button color="primary" class="mr-1" (click)="editTask(todo)">
+                <mat-icon>
+                  <fa-icon [icon]="faIcons.edit" class="fa-lg"></fa-icon>
+                </mat-icon>
+              </button>
+              <button mat-icon-button color="warn" (click)="deleteTask(todo)">
+                <mat-icon>
+                  <fa-icon [icon]="faIcons.delete" class="fa-lg"></fa-icon>
+                </mat-icon>
+              </button>
+            </span>
+          </div>
+        </div>
+      </perfect-scrollbar>
+    </div>
+  </div>
+</div>
