@@ -55,7 +55,7 @@
     "http-errors": "^1.7.3",
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.6.11",
+    "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
     "ngx-image-cropper": "^1.4.1",
     "ngx-perfect-scrollbar": "^8.0.0",
